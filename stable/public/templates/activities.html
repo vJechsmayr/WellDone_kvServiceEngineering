@@ -1,0 +1,47 @@
+<h1 class="page-header"><span class="glyphicon glyphicon-tasks"></span>   {{activitytype.headline}}</h1>
+
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">
+    <a href="#/activities/new" class="btn btn-success">
+      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Neu
+    </a>
+    <span class="showuseractivities">
+        	<input type="checkbox" ng-model="showuseractivities" ng-change="update()"/> <span class="glyphicon glyphicon-eye-open"></span>    Zeige nur meine To-Do's
+    </span>
+  </div>
+
+  <div class="panel-body">
+
+    <div class="panel panel-success" ng-repeat="(key, value) in activities | groupBy: 'project'">
+      <div class="panel-heading">
+        <h3 class="panel-title">{{key}}</h3>
+      </div>
+      <div class="panel-body">
+        <table class="table">
+          <tr>
+            <th>Titel</th>
+            <th>Verantwortlicher</th>
+            <th>Status</th>
+            <th>Start</th>
+            <th>Fällig</th>
+
+
+          </tr>
+          <tr ng-repeat="a in value">
+            <td><a href="#/activities/{{a.id}}">{{a.title}}</a></td>
+            <td>{{a.firstname + ' ' + a.lastname}}</td>
+            <td>{{a.astatus}}</td>
+            <td>{{a.start | date: 'dd.MM.yyyy'}}</td>
+            <td>{{a.end | date: 'dd.MM.yyyy'}}</td>
+
+
+          </tr>
+        </table>
+      </div>
+    </div>
+
+
+  </div>
+</div>

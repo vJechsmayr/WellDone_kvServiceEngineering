@@ -1,0 +1,38 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.welldone.post.NewPostActivity" >
+
+    <item
+        android:id="@+id/image_project"
+        android:orderInCategory="1"
+        android:icon="@drawable/project"
+        android:title=""
+        app:showAsAction="always"/>
+    
+    <item
+        android:id="@+id/label_newProject"
+        android:orderInCategory="2"
+        android:title="@string/label_newProject"
+        app:showAsAction="always"/>
+    
+    <item
+        android:id="@+id/label_blank_np1"
+        android:orderInCategory="3"
+        android:title="     "
+        app:showAsAction="always"/>
+    
+    <item
+        android:id="@+id/label_blank_np2"
+        android:orderInCategory="4"
+        android:title="   "
+        app:showAsAction="always"/>
+    
+    <item
+        android:id="@+id/action_cancel"
+        android:orderInCategory="5"
+        android:icon="@drawable/cancel"
+        android:title="@string/action_cancel"
+        app:showAsAction="always"/>
+
+</menu>

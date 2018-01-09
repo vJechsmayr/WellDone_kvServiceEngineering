@@ -1,0 +1,68 @@
+<h1 class="page-header"><span class="glyphicon glyphicon-folder-open"></span>  {{project.title}}</h1>
+<h3>Details</h3>
+<div class="projectedit">
+    <div class="alert alert-danger" role="alert" ng-show="message && iserrmessage">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {{message}}
+    </div>
+
+    <div class="alert alert-success" role="alert" ng-show="message && !iserrmessage">
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> {{message}}
+    </div>
+
+    <div class="input-group"> <span class="input-group-addon">Projekt-Titel</span>
+        <input type="text" class="form-control" ng-model="project.title">
+    </div>
+    <div class="input-group"> <span class="input-group-addon">Projekttyp</span>
+        <input type="text" disabled="disabled" class="form-control" ng-model="project.type">
+    </div>
+    <div class="input-group"> <span class="input-group-addon">Projektleiter</span>
+        <!-- <input type="text" class="form-control" ng-model="project.owner">-->
+        <select id="selectowner" class="wdselect">
+    </select>
+    </div>
+    <div class="input-group"> <span class="input-group-addon">Projektstatus</span>
+        <select id="selectstatus" class="wdselect">
+    </select>
+    </div>
+
+
+    <div class="input-group date" id="datestart">
+        <span class="input-group-addon">Start-Datum</span>
+        <input type='text' class="form-control" />
+        <span class="input-group-addon">
+            <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+    </div>
+    <div class="input-group" id="dateend">
+        <span class="input-group-addon">Ende-Datum</span>
+        <input type='text' class="form-control" />
+        <span class="input-group-addon">
+            <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+    </div>
+
+    <button class="align-r btn btn-success" ng-click="update()"> <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Speichern </button>
+
+</div>
+<br /><br /><br /><br />
+<h3>Aufgaben</h3>
+<div class="projectusers">
+    <table class="table">
+        <tr>
+            <th>Aufgabe</th>
+            <th>Mitarbeiter</th>
+            <th>Status</th>
+            <th>Start</th>
+            <th>Fällig</th>
+            <th>Typ</th>
+        </tr>
+        <tr ng-repeat="a in activities">
+            <td>{{a.title}}</td>
+            <td>{{a.firstname + ' ' + a.lastname}}</td>
+            <td>{{a.status}}</td>
+            <td>{{a.start | date: 'dd.MM.yyyy'}}</td>
+            <td>{{a.end | date: 'dd.MM.yyyy'}}</td>
+            <td>{{a.type}}</td>
+        </tr>
+    </table>
+</div>

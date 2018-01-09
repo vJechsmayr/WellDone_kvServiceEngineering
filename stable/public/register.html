@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="welldonefavicon.ico">
+
+  <title>Register to WellDone</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/login.css" rel="stylesheet">
+
+  <!-- AngularJS Framework-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/angular.min.js"></script>
+
+  <script src="js/welldone/register.js"></script>
+
+</head>
+
+<body ng-app="wellDoneApp">
+
+  <div class="container" ng-controller="registerController">
+
+
+    <div class="form-signin">
+      <img src="images/WellDone.png" width="200" />
+      <h2 class="form-signin-heading">Registrierung</h2>
+
+      <div class="alert alert-danger" role="alert" ng-show="message">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span class="sr-only">Error:</span> {{message}}
+      </div>
+
+      <label for="inputVorname" class="sr-only">Vorname:</label>
+      <input type="text" id="inputVorname" size="40" maxlength="250" name="vorname" class="form-control" placeholder="Vorname"
+        ng-model="firstname" required>
+
+      <label for="inputNachname" class="sr-only">Nachname:</label>
+      <input type="text" id="inputNachname" size="40" maxlength="250" name="nachname" class="form-control" placeholder="Nachname"
+        ng-model="lastname" required>
+
+      <label for="inputEmail" class="sr-only">E-Mail:</label>
+      <input type="email" id="inputEmail" size="40" maxlength="250" name="email" class="form-control" placeholder="E-Mail-Adresse"
+        ng-model="email" required>
+
+      <label for="inputPasswort" class="sr-only">Dein Passwort:</label>
+      <input type="password" id="inputPasswort" size="40" maxlength="250" name="password" class="form-control" placeholder="Passwort"
+        ng-model="password" required>
+
+      <label for="inputPasswort2" class="sr-only">Passwort wiederholen:</label>
+      <input type="password" id="inputPasswort2" size="40" maxlength="250" name="password2" class="form-control" placeholder="Passwort wiederholen"
+        ng-model="password2" required>
+
+      <button class="btn-success btn btn-lg btn-primary btn-block" ng-click="register()">Registrieren</button>
+    </div>
+
+  </div>
+  <!-- /container -->
+</body>
+
+</html>

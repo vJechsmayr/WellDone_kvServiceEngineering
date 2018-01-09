@@ -1,0 +1,35 @@
+<h1 class="page-header"><span class="glyphicon glyphicon-folder-open"></span>  Projektübersicht</h1>
+
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">
+    <a href="#/projects/new" class="btn btn-success">
+      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> neues Projekt
+    </a>
+    <span class="showuserprojects">
+        	<input type="checkbox" ng-model="showuserprojects" ng-change="update()"/> Zeige nur meine Projekte
+        </span>
+  </div>
+
+  <div class="panel-body">
+    <table class="table">
+      <tr>
+        <th>Titel</th>
+        <th>Projektleiter</th>
+        <th>Status</th>
+        <th>Typ</th>
+        <th>Start</th>
+        <th>Fällig</th>
+      </tr>
+      <tr ng-repeat="p in projects">
+        <td><a href="#/projects/{{p.id}}">{{p.title}}</a></td>
+        <td>{{p.ownerfirstname + ' ' + p.ownerlastname}}</td>
+        <td>{{p.status}}</td>
+        <td>{{p.type}}</td>
+        <td>{{p.start | date: 'dd.MM.yyyy'}}</td>
+        <td>{{p.end | date: 'dd.MM.yyyy'}}</td>
+      </tr>
+    </table>
+  </div>
+</div>

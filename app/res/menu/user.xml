@@ -1,0 +1,38 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.welldone.home.HomeActivity" >
+
+    <item
+        android:id="@+id/menu_image_user"
+        android:orderInCategory="1"
+        android:icon="@drawable/users"
+        android:title=""
+        app:showAsAction="always"/>
+    
+    <item
+        android:id="@+id/label_user"
+        android:orderInCategory="1"
+        android:title="@string/label_user"
+        app:showAsAction="always"/>
+    
+    <item
+        android:id="@+id/label_blank_user"
+        android:orderInCategory="2"
+        android:title="   "
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_newUser"
+        android:orderInCategory="3"
+        android:icon="@drawable/add"
+        android:title="@string/action_newUser"
+        app:showAsAction="always"/>
+    
+    <item
+        android:id="@+id/action_logout"
+        android:orderInCategory="4"
+        android:icon="@drawable/logout"
+        android:title="@string/action_logout"
+        app:showAsAction="always"/>
+
+</menu>

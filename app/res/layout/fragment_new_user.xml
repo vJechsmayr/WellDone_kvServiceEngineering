@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="412dp"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/newuser_label_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/newuser_mail"
+        android:layout_alignBottom="@+id/newuser_mail"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:text="E-Mail:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/newuser_mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/newuser_label_mail"
+        android:ems="10"
+        android:hint="@string/prompt_mail" >
+    </MultiAutoCompleteTextView>
+
+    <TextView
+        android:id="@+id/newuser_label_firstname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/newuser_mail"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="5dp"
+        android:text="Vorname:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/newuser_firstname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/newuser_label_firstname"
+        android:layout_below="@+id/newuser_mail"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:ems="10"
+        android:hint="@string/prompt_firstname" >
+    </MultiAutoCompleteTextView>
+
+    <TextView
+        android:id="@+id/newuser_label_lastname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/newuser_firstname"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="5dp"
+        android:text="Nachname:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/newuser_lastname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/newuser_label_lastname"
+        android:layout_below="@+id/newuser_firstname"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:ems="10"
+        android:hint="@string/prompt_lastname" >
+    </MultiAutoCompleteTextView>
+
+    <TextView
+        android:id="@+id/newuser_label_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/newuser_lastname"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="5dp"
+        android:text="Admin:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spinner_admin"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/newuser_lastname"
+        android:layout_toRightOf="@+id/newuser_label_admin"
+        android:background="@drawable/btn_dropdown_normal"
+        android:entries="@array/admin_active" />
+    
+    <TextView
+        android:id="@+id/newuser_label_active"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/spinner_admin"
+        android:layout_marginTop="11dp"
+        android:layout_marginLeft="5dp"
+        android:text="Aktiv:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+    
+    <Spinner
+        android:id="@+id/spinner_active"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/spinner_admin"
+        android:layout_toRightOf="@+id/newuser_label_admin"
+        android:background="@drawable/btn_dropdown_normal"
+        android:entries="@array/admin_active" />
+    
+    <TextView
+        android:id="@+id/newuser_label_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/spinner_active"
+        android:layout_marginTop="11dp"
+        android:layout_marginLeft="5dp"
+        android:text="Passwort:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+    
+    <EditText
+            android:id="@+id/newuser_pwd"
+            android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_alignParentRight="true"
+        	android:layout_toRightOf="@+id/newuser_label_pwd"
+        	android:layout_below="@+id/spinner_active"
+        	android:layout_marginRight="5dp"
+        	android:layout_marginLeft="5dp"
+            android:drawableLeft="@android:drawable/ic_lock_lock"
+            android:ems="10"
+            android:hint="@string/prompt_newPassword"
+            android:imeActionId="@+id/login"
+            android:imeActionLabel="@string/action_sign_in_short"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:singleLine="true" />
+    
+    <TextView
+        android:id="@+id/newuser_label_pwd_wh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/newuser_pwd"
+        android:layout_marginTop="11dp"
+        android:layout_marginLeft="5dp"
+        android:text="Passwort:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+        
+        <EditText
+            android:id="@+id/newuser_pwd_wh"
+            android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_alignParentRight="true"
+        	android:layout_toRightOf="@+id/newuser_label_pwd_wh"
+        	android:layout_below="@+id/newuser_pwd"
+        	android:layout_marginRight="5dp"
+        	android:layout_marginLeft="5dp"
+            android:drawableLeft="@android:drawable/ic_lock_lock"
+            android:ems="10"
+            android:hint="@string/prompt_password_wh"
+            android:imeActionId="@+id/login"
+            android:imeActionLabel="@string/action_sign_in_short"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:singleLine="true" />
+    
+    <Button
+        android:id="@+id/newuser_button_save"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/newuser_pwd_wh"
+        android:layout_marginTop="15dp"
+        android:adjustViewBounds="true"
+        android:background="@color/highlighted_text_material_dark"
+        android:text="Speichern"
+        android:textStyle="bold" />
+
+</RelativeLayout>
+
+</ScrollView>

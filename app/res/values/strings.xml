@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WellDone</string>
+    <string name="title_projects">Projekte</string>
+    <string name="title_tasks">Aufgaben</string>
+    <string name="title_milestones">Meilensteine</string>
+    <string name="title_tickets">Tickets</string>
+    <string name="title_time_recordings">Zeiterfassung</string>
+    <string name="title_user_administration">Mitarbeiterverwaltung</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_logout">ausloggen</string>
+    <string name="action_cancel">verwerfen</string>
+    <string name="action_newProject">neues Projekt</string>
+    <string name="action_newUser">neuer Benutzer</string>
+    <string name="label_projects">Projektübersicht</string>
+    <string name="label_user">Mitarbeiter</string>
+    <string name="label_user_mail">E-Mail Adresse</string>
+    <string name="label_newProject">Projektdetails</string>
+    <string name="label_newUser">Mitarbeiterdetails</string>
+    <string name="title_activity_start">WellDone</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_new_project"></string>
+    <string name="title_activity_new_user"></string>
+    <string name="prompt_email">E-Mail</string>
+    <string name="prompt_password">Passwort</string>
+    <string name="prompt_newPassword">Neues Passwort</string>
+    <string name="prompt_password_wh">Passwort wiederholen</string>
+    <string name="prompt_title">Titel</string>
+    <string name="prompt_date">TT.MM.YYYY</string>
+    <string name="prompt_mail">max@mustermann.at</string>
+    <string name="prompt_firstname">Max</string>
+    <string name="prompt_lastname">Mustermann</string>
+    <string name="action_sign_in">Anmelden</string>
+    <string name="action_sign_in_short">Anmelden</string>
+    <string name="error_invalid_email">Diese E-Mail Adresse ist ungueltig</string>
+    <string name="error_invalid_password">Dieses Passwort ist zu kurz</string>
+    <string name="error_passwords_not_identical">Die Passwörter sind nicht identisch</string>
+    <string name="error_incorrect_password">Dieses Passwort ist nicht korrekt</string>
+    <string name="error_field_required">Dieses Feld muss befüllt werden</string>
+    <string name="error_email_already_exists">Diese E-Mail Adresse existiert bereits</string>
+    <string name="action_register">neu registrieren</string>
+    <string name="title_activity_register">Registrieren</string>
+    <string name="firstname">Vorname</string>
+    <string name="lastname">Nachname</string>
+    <string name="title_activity_home">Home</string>
+
+    <string-array name="types">
+        <item>internes Projekt</item>
+        <item>Kundenprojekt</item>
+    </string-array>
+    
+    <string-array name="owners">
+        <item>Viktoria Jechsmayr</item>
+        <item>Michael Lehner</item>
+        <item>Dominik Hattenberger</item>
+    </string-array>
+    
+    <string-array name="status">
+        <item>Abgebrochen</item>
+        <item>Abgeschlossen</item>
+        <item>Abnahme</item>
+        <item>Freigabe</item>
+        <item>in Planung</item>
+        <item>in Umsetzung</item>
+    </string-array>
+    
+    <string-array name="admin_active">
+        <item>Ja</item>
+        <item>Nein</item>
+    </string-array>
+
+</resources>

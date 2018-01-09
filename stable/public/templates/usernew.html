@@ -1,0 +1,45 @@
+<h1 class="page-header"><span class="glyphicon glyphicon-user"></span>  {{user.firstname + ' ' + user.lastname}}</h1>
+<div class="useredit">
+  <div class="alert alert-danger" role="alert" ng-show="message && iserrmessage">
+    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {{message}}
+  </div>
+
+  <div class="alert alert-success" role="alert" ng-show="message && !iserrmessage">
+    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> {{message}}
+  </div>
+
+  <div class="input-group"> <span class="input-group-addon">Email</span>
+    <input type="email" class="form-control" ng-model="user.email">
+  </div>
+  <div class="input-group"> <span class="input-group-addon">Vorname</span>
+    <input type="text" class="form-control" ng-model="user.firstname">
+  </div>
+  <div class="input-group"> <span class="input-group-addon">Nachname</span>
+    <input type="text" class="form-control" ng-model="user.lastname">
+  </div>
+
+  <div class="input-group"> <span class="input-group-addon">Admin</span>
+    <select id="selectadmin" class="wdselect">
+    
+    <option value="0">Nein</option>
+    <option value="1">Ja</option>
+    </select>
+  </div>
+
+  <div class="input-group"> <span class="input-group-addon">Aktiv</span>
+    <select id="selectactive" class="wdselect">
+    <option value="0">Nein</option>
+    <option value="1">Ja</option>
+    </select>
+  </div>
+
+  <div class="password-goup">
+    <div class="input-group"> <span class="input-group-addon">Neues Passwort</span>
+      <input type="password" class="form-control" ng-model="password">
+    </div>
+    <div class="input-group"> <span class="input-group-addon">Passwort wiederholen</span>
+      <input type="password" class="form-control" ng-model="password2">
+    </div>
+  </div>
+  <button class="align-r btn btn-success" ng-click="save()"> <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Speichern </button>
+</div>

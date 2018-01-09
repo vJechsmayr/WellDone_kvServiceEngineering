@@ -1,0 +1,74 @@
+<h1 class="page-header"><span class="glyphicon glyphicon-time"></span>   Zeiterfassung</h1>
+<h3>Details</h3>
+<div class="projectedit">
+    <div class="alert alert-danger" role="alert" ng-show="message && iserrmessage">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {{message}}
+    </div>
+
+    <div class="alert alert-success" role="alert" ng-show="message && !iserrmessage">
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> {{message}}
+    </div>
+
+
+    <div class="input-group date" id="date">
+        <span class="input-group-addon">Datum</span>
+        <input type='text' class="form-control" />
+        <span class="input-group-addon">
+            <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+    </div>
+
+    <div class="input-group date" id="start">
+        <span class="input-group-addon">Start</span>
+        <input type='text' class="form-control" />
+        <span class="input-group-addon">
+            <span class="glyphicon glyphicon-time"></span>
+        </span>
+    </div>
+
+    <div class="input-group date" id="end">
+        <span class="input-group-addon">Ende</span>
+        <input type='text' class="form-control" />
+        <span class="input-group-addon">
+            <span class="glyphicon glyphicon-time"></span>
+        </span>
+    </div>
+
+
+    <div class="input-group"> <span class="input-group-addon">Aufgabe</span>
+        <select id="selectactivity" class="wdselect">
+    </select>
+    </div>
+
+    <button class="align-r btn btn-success" ng-click="save()"> <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Speichern </button>
+
+
+    <br /><br /><br />
+
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h3 class="panel-title">Zeiteinträge für {{day | date: 'dd.MM.yyyy'}}</h3>
+        </div>
+        <div class="panel-body">
+            <table class="table">
+                <tr>
+                    <th>Projekt</th>
+                    <th>Aufgabe</th>
+                    <th>Start</th>
+                    <th>Ende</th>
+
+
+                </tr>
+                <tr ng-repeat="t in times">
+                    <td>{{t.projecttitle}}</td>
+                    <td>{{t.acttitle}}</td>
+                    <td>{{t.timefrom | date: 'dd.MM.yyyy'}}</td>
+                    <td>{{t.timeto | date: 'dd.MM.yyyy'}}</td>
+
+
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>

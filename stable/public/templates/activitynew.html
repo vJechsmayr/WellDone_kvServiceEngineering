@@ -1,0 +1,65 @@
+<h1 class="page-header"><span class="glyphicon glyphicon-tasks"></span>   {{activity.title}}</h1>
+<h3>Details</h3>
+<div class="projectedit">
+  <div class="alert alert-danger" role="alert" ng-show="message && iserrmessage">
+    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {{message}}
+  </div>
+
+  <div class="alert alert-success" role="alert" ng-show="message && !iserrmessage">
+    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> {{message}}
+  </div>
+
+  <div class="input-group"> <span class="input-group-addon">Titel</span>
+    <input type="text" class="form-control" ng-model="activity.title">
+  </div>
+  <div class="input-group"> <span class="input-group-addon">Typ</span>
+    <select id="selecttyp" class="wdselect">
+    </select>
+  </div>
+  <div class="input-group"> <span class="input-group-addon">Status</span>
+    <!-- <input type="text" class="form-control" ng-model="project.owner">-->
+    <select id="selectstatus" class="wdselect">
+    </select>
+  </div>
+
+
+  <div class="input-group date" id="datestart">
+    <span class="input-group-addon">Start-Datum</span>
+    <input type='text' class="form-control" />
+    <span class="input-group-addon">
+            <span class="glyphicon glyphicon-calendar"></span>
+    </span>
+  </div>
+  <div class="input-group" id="dateend">
+    <span class="input-group-addon">Ende-Datum</span>
+    <input type='text' class="form-control" />
+    <span class="input-group-addon">
+            <span class="glyphicon glyphicon-calendar"></span>
+    </span>
+  </div>
+
+  <div class="input-group"> <span class="input-group-addon">Beschreibung</span>
+    <textarea class="form-control" ng-model="activity.description" cols="20" rows="5"></textarea>
+  </div>
+  <div class="input-group"> <span class="input-group-addon">zugeordnetes Projekt</span>
+    <select id="selectproject" class="wdselect">
+    </select>
+  </div>
+  <div class="input-group"> <span class="input-group-addon">Übergeordnete Aufgabe</span>
+    <select id="selectactivity" class="wdselect">
+    </select>
+  </div>
+  <div class="input-group"> <span class="input-group-addon">Verantwortlicher Mitarbeiter</span>
+    <select id="selectuser" class="wdselect">
+    </select>
+  </div>
+  <div class="input-group" ng-show="showPriority()"> <span class="input-group-addon">Priorität</span>
+    <select id="selectpriority" class="wdselect">
+    </select>
+  </div>
+
+
+
+  <button class="align-r btn btn-success" ng-click="save()"> <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Speichern </button>
+
+</div>
